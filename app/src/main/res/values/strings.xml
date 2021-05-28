@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">App_BTL</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="image_book">
+        <item id="1">Mắt Biếc</item>
+        <item id="2">Nếu Như Yêu</item>
+        <item id="3">Lịch Sử Việt Nam</item>
+        <item>Nhà Giả Kim</item>
+        <item>Một đứa trẻ chạy trốn tôi</item>
+    </string-array>
+    <string-array name="type_book">
+        <item>Sách truyện</item>
+        <item>Sách giáo khoa</item>
+        <item>Sách tâm lí</item>
+        <item>Truyện cười</item>
+
+    </string-array>
+</resources>

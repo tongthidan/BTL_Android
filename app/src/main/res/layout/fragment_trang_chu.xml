@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TrangChuFragment">
+
+    <LinearLayout
+
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HỆ THỐNG QUẢN LÝ SÁCH "
+            android:textSize="25dp"
+
+            />
+        <TextView
+            android:textColor="@color/textHeader"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRANG CHỦ"/>
+<!--        <TextView-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sách là nguồn của cải quý báu của thế giới và là di sản xứng đáng của các thế hệ và các quốc gia."-->
+<!--            />-->
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngày nay công nghệ thông tin vô cùng phát triển khiến việc tra cứu thông tin dễ dàng hơn. Các thư viện hiện nay cũng không còn là những thư viện truyền thống đơn thuần mà kết hợp cả kết nối internet với các đầu sách"
+/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anhtrangchu"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Để giúp việc người dùng có thể dễ dàng trong việc sử dụng và theo dõi các thông tin về các đầu sách cũng như cần tư vấn các vấn đề liên quan đến sách.
+Em đã xây dựng một app ứng dựng quản lý sách này. "
+            />
+    </LinearLayout>
+
+</LinearLayout>

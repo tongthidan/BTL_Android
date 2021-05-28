@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mHome"
+        android:icon="@drawable/ic_home"
+        android:title="Trang Chủ"
+
+        />
+    <item
+        android:id="@+id/mKhoSach"
+        android:icon="@drawable/ic_khosach"
+        android:title="Kho Sách"
+
+        />
+<!--    <item-->
+<!--        android:id="@+id/mHistory"-->
+<!--        android:icon="@drawable/ic_history"-->
+<!--        android:title="Quản Lý"-->
+
+<!--        />-->
+    <item
+        android:id="@+id/mHelp"
+        android:icon="@drawable/ic_help"
+        android:title="Trợ giúp"
+
+        />
+</menu>

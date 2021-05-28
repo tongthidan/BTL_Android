@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginBottom="30dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textColor="@color/textHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTER FORM"/>
+    <EditText
+        android:textColorHint="@color/black"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEmail"/>
+    <EditText
+        android:textColorHint="@color/black"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPass"
+        android:inputType="textPassword"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/btRegister"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginLeft="100dp"/>
+
+        <Button
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btCancel"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+    </LinearLayout>
+</LinearLayout>
