@@ -14,9 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app_btl.DB.SQLiteBook;
 import com.example.app_btl.Model.Book;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class AddBookActivity extends AppCompatActivity {
-    EditText editTextName, editTextMota, editTextTien;
+    TextInputEditText editTextName, editTextMota, editTextTien;
     AutoCompleteTextView loaiSach;
     Spinner spinnerAnh;
     ImageView anhSach;
@@ -27,9 +28,9 @@ public class AddBookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
-        editTextName = findViewById(R.id.addBook_name);
-        editTextMota = findViewById(R.id.addBook_des);
-        editTextTien = findViewById(R.id.addBook_price);
+        editTextName = (TextInputEditText)findViewById(R.id.addBook_name);
+        editTextMota = (TextInputEditText)findViewById(R.id.addBook_des);
+        editTextTien = (TextInputEditText)findViewById(R.id.addBook_price);
         loaiSach = findViewById(R.id.addBook_type);
         spinnerAnh = findViewById(R.id.spinnerAnh);
         anhSach = findViewById(R.id.addBook_img);

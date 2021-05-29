@@ -12,13 +12,15 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btLogin,btRegister;
-    private EditText email,password;
+    private TextInputEditText email,password;
     protected FirebaseAuth mFirebaseAuth;
 
     @Override
@@ -30,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String e=email.getText().toString();
                 String p=password.getText().toString();
                 if(e.isEmpty()){
@@ -77,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initView() {
         btLogin=findViewById(R.id.btLogin);
         btRegister=findViewById(R.id.btRegister);
-        email=findViewById(R.id.txtEmail);
-        password=findViewById(R.id.txtPass);
+        email= (TextInputEditText)findViewById(R.id.txtEmail);
+        password= (TextInputEditText)findViewById(R.id.txtPass);
     }
 }

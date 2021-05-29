@@ -16,11 +16,11 @@ public class FragmentBottomAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 0: return new TrangChuFragment();
-            case 1: return new KhoSachFragment();
+            case 0: return new KhoSachFragment();
+            case 1: return new ExploreFragment();
             case 2: return new ThongTinThemFragment();
             case 3: return new QuanLyFragment();
-            default:  return new TrangChuFragment();
+            default:  return new KhoSachFragment();
         }
     }
 

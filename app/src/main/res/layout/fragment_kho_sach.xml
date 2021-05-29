@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".KhoSachFragment">
+
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,6 +17,16 @@
             android:text="DANH MỤC SÁCH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <SearchView
+            android:id="@+id/search"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false">
+
+            <requestFocus />
+        </SearchView>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
             android:id="@+id/recycleView"

@@ -35,14 +35,36 @@ public class KhoSachFragment extends Fragment {
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
     AppBarLayout optionMenu;
+    SearchView searchView;
+
+//    @Override
+//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.mSearch));
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                List<Book> list = sqLiteBook.searchByName(newText);
+//                adapter.setBooks(list);
+//                recyclerView.setAdapter(adapter);
+//                return true;
+//            }
+//        });
+//        super.onCreateOptionsMenu(menu, inflater);
+//
+//    }
 
     @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-//        inflater = getMenuInflater().inflate(R.menu.menu_search, menu);
-//        MenuInflater menuInflater = getMe
-//        inflater.inflate(R.menu.menuoption,menu);
-//        MenuItem item = menu.findItem(R.id.mSearch);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.mSearch));
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View khoView = inflater.inflate(R.layout.fragment_kho_sach, container, false);
+        btnAdd = khoView.findViewById(R.id.btAdd);
+        searchView = khoView.findViewById(R.id.search);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -57,17 +79,6 @@ public class KhoSachFragment extends Fragment {
                 return true;
             }
         });
-        super.onCreateOptionsMenu(menu, inflater);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View khoView = inflater.inflate(R.layout.fragment_kho_sach, container, false);
-//        optionMenu = khoView.findViewById(R.id.toolbar);
-        btnAdd = khoView.findViewById(R.id.btAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

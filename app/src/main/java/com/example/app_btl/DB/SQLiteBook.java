@@ -77,6 +77,14 @@ public class SQLiteBook  extends SQLiteOpenHelper {
         }
         return list;
     }
+        public int deleteBook(int id) {
+        String whereClause = "id = ?";
+        String[] whereArgs = {Integer.toString(id)};
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        return sqLiteDatabase.delete("book", whereClause, whereArgs);
+    }
+
+
 
 //    public QuyenGop getFundByID(int id) {
 //        String whereClause = "id = ?";
@@ -92,13 +100,6 @@ public class SQLiteBook  extends SQLiteOpenHelper {
 //            fund = new QuyenGop(id, name, city, day, money);
 //        }
 //        return fund;
-//    }
-//
-//    public int deleteFund(int id) {
-//        String whereClause = "id = ?";
-//        String[] whereArgs = {Integer.toString(id)};
-//        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-//        return sqLiteDatabase.delete("quyengop", whereClause, whereArgs);
 //    }
 //
 

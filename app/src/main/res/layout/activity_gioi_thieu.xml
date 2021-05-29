@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".TrangChuFragment">
+
+    <LinearLayout
+
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:textColor="@color/textHeader"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HỆ THỐNG QUẢN LÝ SÁCH "
+            android:textSize="30dp"
+
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/huongdan"
+            android:layout_marginBottom="10dp"
+
+            />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_baseline_app_registration_24"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_marginLeft="30dp"
+                     android:layout_marginRight="30dp"
+                    android:id="@+id/btnDangKi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng kí" />
+
+                <Button
+                    android:textColor="@color/black"
+                    android:id="@+id/btnDangNhap"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng nhập"
+                    app:icon="@drawable/ic_baseline_login_24" />
+            </LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:lottie_fileName="book.json"
+            app:lottie_url="REPLACE_JSON_URL"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

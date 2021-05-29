@@ -15,9 +15,10 @@ import android.widget.Spinner;
 
 import com.example.app_btl.DB.SQLiteBook;
 import com.example.app_btl.Model.Book;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class UpdateBookActivity extends AppCompatActivity {
-    EditText editTextName, editTextMota, editTextTien, editID;
+    TextInputEditText editTextName, editTextMota, editTextTien, editID;
     AutoCompleteTextView loaiSach;
     Spinner spinnerAnh;
     ImageView anhSach;
@@ -28,10 +29,10 @@ public class UpdateBookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_book);
-        editTextName = findViewById(R.id.addBook_name);
-        editTextMota = findViewById(R.id.addBook_des);
-        editTextTien = findViewById(R.id.addBook_price);
-        editID = findViewById(R.id.book_Id);
+        editTextName =  (TextInputEditText)findViewById(R.id.addBook_name);
+        editTextMota = (TextInputEditText)findViewById(R.id.addBook_des);
+        editTextTien = (TextInputEditText)findViewById(R.id.addBook_price);
+        editID = (TextInputEditText)findViewById(R.id.addBook_Id);
         loaiSach = findViewById(R.id.addBook_type);
         spinnerAnh = findViewById(R.id.spinnerAnh);
         anhSach = findViewById(R.id.addBook_img);
@@ -43,7 +44,7 @@ public class UpdateBookActivity extends AppCompatActivity {
         if (intent != null){
             Book book = (Book) intent.getSerializableExtra("book");
             Integer id = book.getId();
-
+            anhSach.setImageResource(book.getAnhSach());
             editID.setText(id +"");
             editTextName.setText(book.getTenSach().toString());
             loaiSach.setText(book.getLoaiSach().toString());
@@ -106,7 +107,8 @@ public class UpdateBookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int id = Integer.parseInt(editID.getText().toString());
-
+                sqLiteBook.deleteBook(id);
+                finish();
             }
         });
     }

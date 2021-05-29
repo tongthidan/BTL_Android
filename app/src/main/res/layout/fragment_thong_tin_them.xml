@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".ThongTinThemFragment">
@@ -10,17 +11,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="THÔNG TIN KHI CẦN TRỢ GIÚP "
+            android:text="THÔNG TIN KHI CẦN "
             android:textColor="@color/textHeader"
-            android:textSize="25dp" />
+            android:textSize="28dp" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -52,17 +56,24 @@
             android:orientation="horizontal">
 
             <Button
+                android:textColor="@color/white"
+                android:backgroundTint="@color/nhantin"
                 android:id="@+id/btnCall"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                app:icon="@drawable/ic_baseline_call_24"
+
                 android:layout_marginRight="50dp"
-                android:drawableLeft="@android:drawable/ic_menu_call"
+
                 android:text="Gọi ngay" />
 
             <Button
+
                 android:id="@+id/btnNhanTin"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                app:icon="@drawable/ic_baseline_message_24"
+                android:backgroundTint="@color/nhantin"
                 android:text="Nhắn tin">
 
 
@@ -80,12 +91,14 @@
             android:textSize="18dp" />
 
         <Button
+
             android:id="@+id/btnLink"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-            android:drawableRight="@android:drawable/ic_menu_directions"
-            android:text="Xem thêm thông tin." />
+           android:backgroundTint="@color/xemthem"
+            android:text="Xem thêm thông tin."
+            android:drawableRight="@drawable/ic_explore"/>
     </LinearLayout>
 </LinearLayout>

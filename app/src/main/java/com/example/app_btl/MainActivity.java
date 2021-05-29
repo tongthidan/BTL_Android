@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.mHome:viewPager.setCurrentItem(0);
+                    case R.id.mKhoSach:viewPager.setCurrentItem(0);
                         break;
-                    case R.id.mKhoSach:viewPager.setCurrentItem(1);
+                    case R.id.mExplore:viewPager.setCurrentItem(1);
                         break;
                     case R.id.mHelp:viewPager.setCurrentItem(2);
                         break;
@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 switch (position){
-                    case 0: navigation.getMenu().findItem(R.id.mHome).setChecked(true);
+                    case 0: navigation.getMenu().findItem(R.id.mKhoSach).setChecked(true);
                         break;
-                    case 1: navigation.getMenu().findItem(R.id.mKhoSach).setChecked(true);
+                    case 1: navigation.getMenu().findItem(R.id.mExplore).setChecked(true);
                         break;
                     case 2: navigation.getMenu().findItem(R.id.mHelp).setChecked(true);
                         break;
@@ -79,21 +79,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater menuInflater = getMenuInflater();
-//        menuInflater.inflate(R.menu.menuoption,menu);
-//        return true;
-//    }
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.mSearch:
-//                break;
-//            default:
-//                break;
-//        }
-//        return true;
-//    }
 }
-//}

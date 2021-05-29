@@ -11,12 +11,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button btRegister,btCancel;
-    private EditText email,password;
+    private TextInputEditText email,password;
     protected FirebaseAuth mFirebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void initView() {
         btCancel=findViewById(R.id.btCancel);
         btRegister=findViewById(R.id.btRegister);
-        email=findViewById(R.id.txtEmail);
-        password=findViewById(R.id.txtPass);
+        email= (TextInputEditText)findViewById(R.id.txtEmail);
+        password= (TextInputEditText)findViewById(R.id.txtPass);
     }
 }
