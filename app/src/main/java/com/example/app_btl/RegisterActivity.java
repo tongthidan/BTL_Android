@@ -3,6 +3,7 @@ package com.example.app_btl;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import static android.widget.Toast.*;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button btRegister,btCancel;
@@ -34,12 +37,13 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(RegisterActivity.this,
-                                    "Succsessfull!!", Toast.LENGTH_SHORT).show();
-                            finish();
+                            makeText(RegisterActivity.this,
+                                    "Succsessfull!!", LENGTH_SHORT).show();
+                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                            startActivity(intent);
                         } else {
-                            Toast.makeText(RegisterActivity.this,
-                                    "Fail!!", Toast.LENGTH_SHORT).show();
+                            makeText(RegisterActivity.this,
+                                    "Fail!!", LENGTH_SHORT).show();
                         }
                     }
                 });

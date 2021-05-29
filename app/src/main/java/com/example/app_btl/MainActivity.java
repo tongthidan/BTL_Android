@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.mHelp:viewPager.setCurrentItem(2);
                         break;
+                    case R.id.mAccount: viewPager.setCurrentItem(3);
+                        break;
+
 
                 }
             }
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     case 1: navigation.getMenu().findItem(R.id.mExplore).setChecked(true);
                         break;
                     case 2: navigation.getMenu().findItem(R.id.mHelp).setChecked(true);
+                        break;
+                    case 3: navigation.getMenu().findItem(R.id.mAccount).setChecked(true);
                         break;
 
                 }

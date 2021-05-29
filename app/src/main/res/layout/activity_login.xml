@@ -63,8 +63,18 @@
             android:backgroundTint="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="    LOGIN   "
-            android:layout_marginLeft="80dp"/>
+            android:text="LOGIN"
+            android:layout_marginLeft="20dp"/>
+        <Button
+
+
+            android:id="@+id/btLoginGG"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LOGIN GG  "
+            android:layout_marginLeft="0dp"/>
 
         <Button
 

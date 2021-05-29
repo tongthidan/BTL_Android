@@ -6,13 +6,13 @@
     tools:context=".KhoSachFragment">
 
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:textColor="@color/textHeader"
-            android:textSize="26dp"
+            android:textSize="30dp"
             android:gravity="center"
             android:text="DANH MỤC SÁCH"
             android:layout_width="match_parent"

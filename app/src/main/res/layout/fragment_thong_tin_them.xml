@@ -11,10 +11,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="15dp"
+        android:orientation="vertical"
         tools:ignore="UselessParent">
 
         <TextView
@@ -56,25 +56,25 @@
             android:orientation="horizontal">
 
             <Button
-                android:textColor="@color/white"
-                android:backgroundTint="@color/nhantin"
                 android:id="@+id/btnCall"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                app:icon="@drawable/ic_baseline_call_24"
-
                 android:layout_marginRight="50dp"
+                android:backgroundTint="@color/nhantin"
+                android:text="Gọi ngay"
 
-                android:text="Gọi ngay" />
+                android:textColor="@color/white"
+
+                app:icon="@drawable/ic_baseline_call_24" />
 
             <Button
 
                 android:id="@+id/btnNhanTin"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                app:icon="@drawable/ic_baseline_message_24"
                 android:backgroundTint="@color/nhantin"
-                android:text="Nhắn tin">
+                android:text="Nhắn tin"
+                app:icon="@drawable/ic_baseline_message_24">
 
 
             </Button>
@@ -93,12 +93,12 @@
         <Button
 
             android:id="@+id/btnLink"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-           android:backgroundTint="@color/xemthem"
-            android:text="Xem thêm thông tin."
-            android:drawableRight="@drawable/ic_explore"/>
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_explore"
+            android:text="Xem thêm thông tin." />
     </LinearLayout>
 </LinearLayout>
