@@ -45,7 +45,6 @@ public class RecycleViewItemAdapter extends RecyclerView.Adapter<ItemViewHolder>
                 .load(item.getVolumeInfo().getImageLinks().getThumbnail())
                 .into(holder.item_img);
         holder.textViewName.setText(item.getVolumeInfo().getTitle());
-//        holder.textViewAuthor.setText(item.getVolumeInfo().getAuthors());
         holder.textViewDes.setText(item.getVolumeInfo().getDescription());
         holder.textViewPublisher.setText(item.getVolumeInfo().getPublisher());
         holder.textViewRating.setText(item.getVolumeInfo().getRatingsCount() +"");
