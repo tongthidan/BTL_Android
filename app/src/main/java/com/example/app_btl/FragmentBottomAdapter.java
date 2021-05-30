@@ -19,7 +19,7 @@ public class FragmentBottomAdapter extends FragmentStatePagerAdapter {
             case 0: return new KhoSachFragment();
             case 1: return new ExploreFragment();
             case 2: return new ThongTinThemFragment();
-            case 3: return new QuanLyFragment();
+            case 3: return new AccountFragment();
             default:  return new KhoSachFragment();
         }
     }

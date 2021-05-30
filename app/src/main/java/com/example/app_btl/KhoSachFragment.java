@@ -37,27 +37,6 @@ public class KhoSachFragment extends Fragment {
     AppBarLayout optionMenu;
     SearchView searchView;
 
-//    @Override
-//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.mSearch));
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                List<Book> list = sqLiteBook.searchByName(newText);
-//                adapter.setBooks(list);
-//                recyclerView.setAdapter(adapter);
-//                return true;
-//            }
-//        });
-//        super.onCreateOptionsMenu(menu, inflater);
-//
-//    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
