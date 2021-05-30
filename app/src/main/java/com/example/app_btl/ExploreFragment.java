@@ -39,15 +39,13 @@ public class ExploreFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_explore, container, false);
-        callService();
-        Welcome welcomes = new Welcome();
-        List<Item> list = welcomes.getItems();
+
+
+
+
         recyclerViewItem = view.findViewById(R.id.recycleViewItem);
         searchView = view.findViewById(R.id.search);
-        adapter = new RecycleViewItemAdapter();
-        adapter.setItems(list);
-        recyclerViewItem.setAdapter(adapter);
-        recyclerViewItem.setLayoutManager(new LinearLayoutManager(getContext()));
+        callService();
 
         return view;
     }
@@ -67,9 +65,18 @@ public class ExploreFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void handleResults(Welcome welcomes) {
         welcomes.getItems().forEach(item ->
+
         {
             Log.d("AppLog", String.valueOf(item.getVolumeInfo().getImageLinks().getThumbnail()));
         });
+        List<Item> list = welcomes.getItems();
+
+
+
+        adapter = new RecycleViewItemAdapter();
+        adapter.setItems(list);
+        recyclerViewItem.setAdapter(adapter);
+        recyclerViewItem.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
 }

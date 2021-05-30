@@ -20,7 +20,9 @@ public interface ImageService {
     static ImageService createService(){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        //gưi nhan du lieu
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        //call API
         Retrofit retrofit = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(imageUrl)
                 .client(client)
