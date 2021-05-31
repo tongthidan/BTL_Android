@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,6 +28,11 @@
 
             <requestFocus />
         </SearchView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
             android:id="@+id/recycleView"
@@ -36,7 +42,7 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-
+        </ScrollView>
 
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton

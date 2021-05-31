@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+
+        android:id="@+id/nav_kho"
+        android:title="Album"
+         />
+    <item android:id="@+id/nav_yeuthich"
+        android:icon="@drawable/ic_favorite"
+        android:title="Yêu thích"
+       />
+    <item android:id="@+id/nav_riengtu"
+        android:icon="@drawable/ic_lock"
+        android:title="Riêng tư"
+        />
+</menu>

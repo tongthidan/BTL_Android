@@ -1,15 +1,20 @@
 package com.example.app_btl;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -21,8 +26,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,10 +40,16 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
     private static final String TAG = "GoogleActivity";
     private GoogleSignInClient mGoogleSignInClient;
+    private NotificationManagerCompat managerCompat;
+    private  static  final  String CHANNEL_1_ID = "channel1";
+    private  static  final  String CHANNEL_2_ID = "channel2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        managerCompat = NotificationManagerCompat.from(this);
+        createNotificationChannels();
         mFirebaseAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -49,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         initView();
+        setOnlickGgSignBtn();
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this,
                                         MainActivity.class);
-
+                                sendOnChannel1();
                                 startActivity(intent);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -97,11 +107,57 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    private void createNotificationChannels() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel1 = new NotificationChannel(
+                    CHANNEL_1_ID,
+                    "Channel 1", NotificationManager.IMPORTANCE_HIGH
+            );
+            channel1.setDescription("This is channel 1");
+            NotificationChannel channel2 = new NotificationChannel(
+                    CHANNEL_2_ID,
+                    "Channel 2",
+                    NotificationManager.IMPORTANCE_LOW
+            );
+            channel1.setDescription("This is channel 2");
+            NotificationManager manager =
+                    this.getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel1);
+            manager.createNotificationChannel(channel2);
+        }
+    }
+
+    private void sendOnChannel1(){
+        String title = email.getText().toString();
+        String content = password.getText().toString();
+        Notification notification = new NotificationCompat.Builder(this,
+                CHANNEL_1_ID).setSmallIcon(R.drawable.ic_baseline_notifications_none_24)
+                .setContentTitle(title)
+                .setContentText(content)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE).build();
+        int notiID = 1;
+        managerCompat.notify(notiID,notification);
+    }
+    private void sendOnChannel2(){
+        String title = email.getText().toString();
+        String content = password.getText().toString();
+        Notification notification = new NotificationCompat.Builder(this,
+                CHANNEL_2_ID).setSmallIcon(R.drawable.ic_baseline_notifications_active_24)
+                .setContentTitle(title)
+                .setContentText(content)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setCategory(NotificationCompat.CATEGORY_CALL).build();
+        int notiID = 2;
+        managerCompat.notify(notiID,notification);
+    }
+
     private void setOnlickGgSignBtn() {
        btnLoginGG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn();
+
             }
         });
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#0099ff</color>
+    <color name="tabLayout">#488DBC</color>
     <color name="trangcanhan">#FAE2EA</color>
     <color name="colorLogin">#ABD5F1</color>
     <color name="colorAccent">#F19206</color>
