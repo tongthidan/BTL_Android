@@ -39,12 +39,19 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
 
-                android:src="@drawable/tay"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp" />
+            <TextView
+                android:id="@+id/account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Tống Thị Đan "
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/email"
+                android:id="@+id/account_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -171,6 +178,16 @@
                 />
 
         </LinearLayout>
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
+
 </ScrollView>

@@ -1,8 +1,11 @@
 package com.example.app_btl;
 
+import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,6 +34,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.Calendar;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -86,6 +91,8 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this,
                                         MainActivity.class);
+
+
                                 sendOnChannel1();
                                 startActivity(intent);
                             }
